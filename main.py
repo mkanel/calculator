@@ -62,5 +62,16 @@ else:
             for n in sys.argv[2:]:
                 result = multiplication(result, n)
             print(result)
+    elif fc == "div":
+        if numOfArgs == 2:
+            print("There are no numbers to div!")
+        elif numOfArgs == 4:
+            if int(sys.argv[3]) != 0:
+                result = division(sys.argv[2], sys.argv[3])
+                print(result)
+            else:
+                print("Division by zero is not allowed!")
+        else:
+            print("Please provide two numbers")
     else:
         print("This function is not supported!")
