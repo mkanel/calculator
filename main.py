@@ -5,7 +5,7 @@ import sys
 
 def addition(x, y):
 
-    result = x + y
+    result = float(x) + float(y)
     return(result)
 
 
@@ -39,6 +39,12 @@ else:
     # print( "The function is {}".format( fc ) )
 
     if fc == "add":
-        print("add")
+        if numOfArgs == 2:
+            print("There are no numbers to add!")
+        else:
+            result = 0
+            for n in sys.argv[2:]:
+                result = addition(result, n)
+            print(result)
     else:
         print("This function is not supported!")
