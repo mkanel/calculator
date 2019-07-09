@@ -10,17 +10,17 @@ def addition(x, y):
 
 
 def subtraction(x, y):
-    result = x - y
+    result = float(x) - float(y)
     return(result)
 
 
 def multiplication(x, y):
-    result = x * y
+    result = float(x) * float(y)
     return(result)
 
 
 def division(x, y):
-    result = x / y
+    result = float(x) / float(y)
     return(result)
 
 ########################################################
@@ -46,5 +46,13 @@ else:
             for n in sys.argv[2:]:
                 result = addition(result, n)
             print(result)
+    elif fc == "sub":
+        if numOfArgs == 2:
+            print("There are no numbers to sub!")
+        elif numOfArgs == 4:
+            result = subtraction(sys.argv[2], sys.argv[3])
+            print(result)
+        else:
+            print("Please provide two numbers")
     else:
         print("This function is not supported!")
