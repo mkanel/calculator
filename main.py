@@ -54,5 +54,13 @@ else:
             print(result)
         else:
             print("Please provide two numbers")
+    elif fc == "mul":
+        if numOfArgs == 2:
+            print("There are no numbers to mul!")
+        else:
+            result = 1
+            for n in sys.argv[2:]:
+                result = multiplication(result, n)
+            print(result)
     else:
         print("This function is not supported!")
